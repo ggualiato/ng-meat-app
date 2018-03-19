@@ -1,5 +1,7 @@
 # Meat - Angular App Starter
 
+Aplicação desenvolvida durante o curso "Construindo Aplicações Web Com o Novo Angular 4", o desenvolvimento foi iniciado com um template disponibilizado pelo instrutor.
+
 ## 1. Passos para começar
 
 ### Clonando o Repositório
