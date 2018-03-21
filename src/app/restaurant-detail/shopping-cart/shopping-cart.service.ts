@@ -13,9 +13,21 @@ export class ShoppingCartService {
             .find((mItem) => mItem.menuItem.id === item.id)
 
         if (foundItem) {
-            foundItem.quantity = foundItem.quantity + 1
+            this.increaseQty(foundItem)
         } else {
             this.items.push(new CartItem(item))
+        }
+    }
+
+    increaseQty(item: CartItem) {
+        item.quantity = item.quantity + 1
+    }
+
+    decreaseQty(item: CartItem) {
+        item.quantity = item.quantity - 1
+
+        if (item.quantity === 0) {
+            this.removeItem(item)
         }
     }
 
