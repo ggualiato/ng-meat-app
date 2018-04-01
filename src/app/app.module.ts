@@ -7,7 +7,6 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms'
 import { ROUTES } from './app.routes'
 
 import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -39,8 +38,7 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    SharedModule,
-    CoreModule
+    SharedModule.forRoot()
   ],
   providers: [
     {
