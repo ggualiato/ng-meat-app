@@ -7,10 +7,7 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms'
 import { ROUTES } from './app.routes'
 
 import { SharedModule } from './shared/shared.module';
-
-import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
-import { RestaurantsService } from './restaurants/restaurants.service';
-import { OrderService } from './order/order.service';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -42,12 +39,10 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    SharedModule    
+    SharedModule,
+    CoreModule
   ],
   providers: [
-    RestaurantsService,
-    OrderService,
-    ShoppingCartService,    
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
