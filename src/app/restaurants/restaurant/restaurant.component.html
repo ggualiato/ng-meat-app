@@ -1,5 +1,5 @@
 <a [routerLink]="['/restaurants', restaurant.id]">
-  <div class="place-info-box">
+  <div class="place-info-box" [@restaurantAppeared]="restaurantState">
     <span class="place-info-box-icon">
       <img [src]="restaurant.imagePath" />
     </span>
@@ -11,6 +11,5 @@
       <span class="place-info-box-detail">{{restaurant.category}}</span>
       <span class="place-info-box-detail">{{restaurant.deliveryEstimate}}</span>
     </div>
-    <!-- /.info-box-content -->
   </div>
 </a>
