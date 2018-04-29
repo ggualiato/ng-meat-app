@@ -16,11 +16,11 @@
     <div class="table-responsive" *ngIf="items().length">
       <table class="table">
         <tbody>
-          <tr *ngFor="let item of items()">
+          <tr *ngFor="let item of items()" [@row]="rowState">
             <th>({{item.quantity}}x) {{item.menuItem.name}}</th>
             <td class="text-right">{{item.value() | currency: 'BRL': true}}</td>
             <td class="text-right">
-              <a (click)="removeItem()" class="btn btn-sm danger">
+              <a (click)="removeItem(item)" class="btn btn-sm danger">
                 <i class="fa fa-remove"></i>
               </a>
             </td>
